@@ -8,13 +8,6 @@
     scroll-behavior: smooth;
 }
 
-
-#nav {
-    font-family: "Arima", cursive;
-    max-width: 80vw;
-    margin: 0 auto;
-}
-
 body {
     min-height: 100vh;
     overflow-x: hidden;
