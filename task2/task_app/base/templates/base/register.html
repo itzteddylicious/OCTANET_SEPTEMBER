@@ -1,0 +1,26 @@
+{% extends "base/layout.html" %}
+
+{% block body %}
+
+    <div class="header-bar">
+        <h1>Register</h1>
+    </div>
+
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %}
+            <label for="id_username">Username:</label>
+            <input type="text" name="username" id="id_username" autocomplete="off">
+
+            <label>{{ form.password1.label }}</label>
+            {{ form.password1 }}
+
+            <label>{{ form.password2.label }}</label>
+            {{ form.password2 }}
+
+            <input style="margin-top: 10px" class="button" type="submit" value="Register">
+        </form>
+        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </div>
+
+{% endblock body %}
